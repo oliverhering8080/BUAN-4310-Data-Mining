@@ -39,6 +39,7 @@ head(valid_df)
 
 # REGRESSION TREE--------------------
 names(train_df)
+str(train_df)
 
 regression_tree <- rpart(Price ~ .,
                          data = train_df, method = 'anova', maxdepth = 20)
@@ -109,6 +110,7 @@ class_tr_train_predict <- predict(class_tree, train_df_cat, type = 'class')
 confusionMatrix(class_tr_train_predict, train_df_cat$cat_price)
 
 # predicting new record
+str(new_record)
 new_record_pred_cat <- predict(class_tree, newdata = new_record)
 new_record_pred_cat
 

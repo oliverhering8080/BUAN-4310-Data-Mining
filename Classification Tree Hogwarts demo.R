@@ -13,7 +13,7 @@ head(hogwarts, 10)
 str(hogwarts)
 
 hogwarts <- hogwarts[ , -c(1:8, 17, 19:26)]
-names(hogwarts)
+str(hogwarts)
 
 hogwarts$House <- as.factor(hogwarts$House)
 
